@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <!-- root -->
+  <project path="art" name="platform_art" remote="ascp" />
+  <project path="bionic" name="platform_bionic" remote="ascp" />
+  <project path="development" name="platform_development" remote="ascp" />
+  <project path="kernel/configs" name="platform_kernel_configs" remote="ascp" />
+  <project path="manifest" name="platform_manifest" remote="ascp" />
+  <project path="official_devices" name="official_devices" remote="ascp" />
+  <project path="tools/metalava" name="platform_tools_metalava" remote="ascp" />
+
+  <!-- build -->
+  <project path="build/make" name="platform_build" remote="ascp" >
+    <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
+    <linkfile src="buildspec.mk.default" dest="build/buildspec.mk.default" />
+    <linkfile src="core" dest="build/core" />
+    <linkfile src="envsetup.sh" dest="build/envsetup.sh" />
+    <linkfile src="target" dest="build/target" />
+    <linkfile src="tools" dest="build/tools" />
+  </project>
+  <project path="build/soong" name="platform_build_soong" remote="ascp" >
+    <linkfile src="root.bp" dest="Android.bp" />
+    <linkfile src="bootstrap.bash" dest="bootstrap.bash" />
+  </project>
+
+  <!-- bootable -->
+  <project path="bootable/deprecated-ota" name="platform_bootable_deprecated-ota" remote="ascp" />
+  <project path="bootable/recovery" name="platform_bootable_recovery" remote="ascp" />
+
+
+  <!-- device -->
+  <project path="device/qcom/sepolicy" name="android_device_qcom_sepolicy" remote="ascp" revision="17" groups="qcom,qssi" />
+  <project path="device/custom/sepolicy" name="platform_device_custom_sepolicy" remote="ascp" />
+  <project path="device/qcom/sepolicy-legacy-um" name="device_qcom_sepolicy-legacy-um" remote="ascp" revision="17" />
+  <project path="device/qcom/sepolicy_vndr/legacy-um" name="device_qcom_sepolicy_vndr_legacy-um" remote="ascp" revision="17" />
+  <project path="device/qcom/sepolicy_vndr/sm8450" name="device_qcom_sepolicy_vndr_sm8450" remote="ascp" revision="17" />
+  <project path="device/qcom/sepolicy_vndr/sm8550" name="device_qcom_sepolicy_vndr_sm8550" remote="ascp" revision="17" />
+  <project path="device/qcom/sepolicy_vndr/sm8650" name="device_qcom_sepolicy_vndr_sm8650" remote="ascp" revision="17" />
+  <project path="device/qcom/sepolicy_vndr/sm8750" name="device_qcom_sepolicy_vndr_sm8750" remote="ascp" revision="17" />
+
+  <!-- external -->
+  <project path="external/bouncycastle" name="platform_external_bouncycastle" remote="ascp" />
+  <project path="external/libchrome-gestures" name="platform_external_libchrome-gestures" groups="pdk" remote="ascp" />
+  <project path="external/libjxl" name="platform_external_libjxl" groups="pdk" remote="ascp" />
+
+  <!-- frameworks -->
+  <project path="frameworks/av" name="platform_frameworks_av" remote="ascp" />
+  <project path="frameworks/base" name="ascp-lfs/platform_frameworks_base" remote="codeberg" revision="clean-branch" />
+  <project path="frameworks/libs/systemui" name="platform_frameworks_libs_systemui" remote="ascp" />
+  <project path="frameworks/native" name="platform_frameworks_native" remote="ascp" />
+  <project path="frameworks/opt/telephony" name="frameworks_opt_telephony" remote="ascp" />
+
+  <!-- hardware -->
+  <project path="hardware/google/pixel" name="platform_hardware_google_pixel" groups="generic_fs,pixel,pdk-gs-arm,pdk-gs-imgtec,pdk-desktop" remote="ascp" />
+  <project path="hardware/google/pixel-sepolicy" name="platform_hardware_google_pixel-sepolicy" groups="generic_fs,pixel,pdk-desktop" remote="ascp" />
+  <project path="hardware/interfaces" name="platform_hardware_interfaces" remote="ascp" />
+  <project path="hardware/lineage/compat" name="platform_hardware_lineage_compat" remote="ascp"/>
+  <project path="hardware/lineage/interfaces" name="platform_hardware_lineage_interfaces" remote="ascp"/>
+  <project path="hardware/qcom-caf/wlan" name="hardware_qcom-caf_wlan" remote="ascp"/>
+  <project path="hardware/google/interfaces" name="platform_hardware_google_interfaces" remote="ascp" />
+
+  <project path="hardware/qcom-caf/common" name="platform_hardware_qcom-caf_common" groups="qcom" remote="ascp">
+    <!-- add guard for AOSP hardware/qcom dir -->
+    <linkfile src="os_pickup_aosp.mk" dest="hardware/qcom/Android.mk" />
+    <!-- add guards for CAF repositories -->
+    <linkfile src="os_pickup_sepolicy_vndr.mk" dest="device/qcom/sepolicy_vndr/SEPolicy.mk" />
+    <linkfile src="os_pickup_qssi.bp" dest="hardware/qcom-caf/msm8953/Android.bp" />
+    <!--
+    <linkfile src="os_pickup.bp" dest="hardware/qcom-caf/msm8996/Android.bp" />
+    <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/msm8996/Android.mk" />
+    -->
+    <linkfile src="os_pickup.bp" dest="hardware/qcom-caf/msm8998/Android.bp" />
+    <linkfile src="os_pickup_qssi.bp" dest="hardware/qcom-caf/sdm660/Android.bp" />
+    <linkfile src="os_pickup_qssi.bp" dest="hardware/qcom-caf/sdm845/Android.bp" />
+    <linkfile src="os_pickup_qssi.bp" dest="hardware/qcom-caf/sm6225/Android.bp" />
+    <linkfile src="os_pickup_qssi.bp" dest="hardware/qcom-caf/sm8150/Android.bp" />
+    <linkfile src="os_pickup_qssi.bp" dest="hardware/qcom-caf/sm8250/Android.bp" />
+    <linkfile src="os_pickup_qssi.bp" dest="hardware/qcom-caf/sm8350/Android.bp" />
+    <linkfile src="os_pickup_qssi.bp" dest="hardware/qcom-caf/sm8450/Android.bp" />
+    <linkfile src="os_pickup_qssi.bp" dest="hardware/qcom-caf/sm8450-6.6/Android.bp" />
+    <linkfile src="os_pickup_qssi.bp" dest="hardware/qcom-caf/sm8550/Android.bp" />
+    <linkfile src="os_pickup_qssi.bp" dest="hardware/qcom-caf/sm8650/Android.bp" />
+    <linkfile src="os_pickup_qssi.bp" dest="hardware/qcom-caf/sm8750/Android.bp" />
+  </project>
+
+  <!-- packages -->
+  <project path="packages/apps/DocumentsUI" name="platform_packages_apps_DocumentsUI" remote="ascp" />
+  <project path="packages/apps/Launcher3" name="ascp/platform_packages_apps_Launcher3" remote="codeberg" revision="clean-branch" />
+  <project path="packages/apps/Settings" name="ascp/platform_packages_apps_Settings" remote="codeberg" revision="clean-branch" />
+  <project path="packages/apps/ThemePicker" name="platform_packages_apps_ThemePicker" remote="ascp" />
+  <project path="packages/apps/OpenDelta" name="packages_apps_OpenDelta" remote="ascp" revision="sixteen-qpr2" />
+  <project path="packages/apps/WallpaperPicker2" name="platform_packages_apps_WallpaperPicker2" remote="ascp" />
+  <project path="packages/modules/Bluetooth" name="platform_packages_modules_Bluetooth" remote="ascp" />
+  <project path="packages/modules/Connectivity" name="platform_packages_modules_Connectivity" remote="ascp" />
+  <project path="packages/modules/Nfc" name="platform_packages_modules_Nfc" remote="ascp" />
+  <project path="packages/modules/UprobeStats" name="platform_packages_modules_UprobeStats" remote="ascp" />
+  <project path="packages/modules/Wifi" name="platform_packages_modules_Wifi" remote="ascp" />
+  <project path="packages/providers/DownloadProvider" name="platform_packages_providers_DownloadProvider" groups="pdk-cw-fs,pdk-fs" remote="ascp" />
+  <project path="packages/services/Telecomm" name="platform_packages_services_Telecomm" remote="ascp" />
+  <project path="packages/services/Telephony" name="platform_packages_services_Telephony" remote="ascp" />
+  <project path="packages/services/OmniJaws" name="packages_services_OmniJaw" remote="ascp" />
+  <project path="packages/apps/ParanoidSense" name="android_packages_apps_ParanoidSense" remote="ascp" />
+  <project path="packages/apps/LMOFreeform" name="packages_apps_LMOFreeform" remote="ascp" />
+  <project path="packages/apps/GameSpace" name="packages_apps_GameSpace" remote="ascp" />
+  <project path="packages/apps/TouchGestures" name="packages_apps_TouchGestures" remote="ascp" />
+  <project path="packages/apps/ColumbusService" name="packages_apps_ColumbusService" remote="ascp" />
+
+  <!-- system -->
+  <project path="system/core" name="platform_system_core" remote="ascp" />
+  <project path="system/keymaster" name="platform_system_keymaster" remote="ascp" />
+  <project path="system/logging" name="platform_system_logging" remote="ascp" />
+  <project path="system/media" name="platform_system_media" remote="ascp" />
+  <project path="system/security" name="platform_system_security" remote="ascp" />
+  <project path="system/sepolicy" name="platform_system_sepolicy" remote="ascp" />
+  <project path="system/update_engine" name="platform_system_update_engine" remote="ascp" />
+  <project path="system/vold" name="platform_system_vold" remote="ascp" />
+  <project path="system/libziparchive" name="platform_system_libziparchive" remote="ascp" />
+  <project path="system/memory/libmeminfo" name="platform_system_memory_libmeminfo" remote="ascp" />
+  <project path="system/netd" name="platform_system_netd" remote="ascp" />
+
+  <!-- vendor -->
+  <project path="vendor/qcom/opensource/core-utils-vendor" name="platform_vendor_qcom_opensource_core-utils-vendor" groups="qcom,kaanapali-vendor" remote="ascp" />
+  <project path="vendor/qcom/opensource/commonsys/wfd" name="android_vendor_qcom_opensource_wfd-commonsys" remote="ascp"/>
+  <project path="vendor/apn" name="platform_vendor_apn" revision="main" remote="ascp"/>
+  <project path="vendor/extra" name="platform_vendor_extra" remote="ascp" />
+  <project path="vendor/custom" name="platform_vendor_custom" remote="ascp" />
+  <project path="vendor/custom-preference" name="vendor_custom-preference" remote="ascp" />
+  <project path="vendor/products" name="platform_vendor_products" remote="ascp" />
+  <project path="vendor/revanced" name="vendor_revanced" remote="ascp" />
+
+  <!-- GMS -->
+  <project path="vendor/pixel/extract-utils" name="kenway214/proprietary_vendor_pixel_extract-utils" remote="codeberg" >
+    <linkfile src="extract-all.py" dest="vendor/pixel/extract-all.py" />
+  </project>
+  <project path="vendor/pixel/clocks" name="kenway214/proprietary_vendor_pixel_clocks" remote="codeberg" />
+  <project path="vendor/pixel/gms" name="blackflag12kenway/proprietary_vendor_pixel_gms" remote="gitlab" clone-depth="1" />
+  <project path="vendor/pixel/prebuilts" name="kenway214/proprietary_vendor_pixel_prebuilts" remote="codeberg" />
+  <project path="vendor/pixel/sounds" name="kenway214/proprietary_vendor_pixel_sounds" remote="codeberg" />
+  <project path="vendor/pixel/themepicker" name="blackflag12kenway/proprietary_vendor_pixel_themepicker" remote="gitlab" />
+</manifest>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <!-- ASCP -->
+  <remote name="ascp"
+          fetch="https://github.com/Pixelify-AOSP"
+          revision="17" />
+          
+  <!-- LineageOS -->
+  <remote name="lineage"
+          fetch="https://github.com/" 
+          revision="lineage-24.0" />
+
+  <!-- Github -->
+  <remote name="github"
+          fetch="https://github.com/" />
+
+  <!-- Gitlab -->
+  <remote name="gitlab"
+          fetch="https://gitlab.com/"
+          revision="17" />
+
+  <!-- Codeberg -->
+  <remote name="codeberg"
+          fetch="https://codeberg.org/"
+          revision="17" />
+
+  <!-- Forgejo -->
+   <remote  name="forgejo"
+           fetch="https://v15.next.forgejo.org/"
+           revision="17" />       
+
+</manifest>

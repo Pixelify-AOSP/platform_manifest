@@ -36,9 +36,11 @@
   <remove-project name="platform/external/freetype" />
   <remove-project name="platform/external/gptfdisk" />
   <remove-project name="platform/external/libchrome-gestures" />
+  <remove-project name="platform/external/libcupsfilters" />
   <remove-project name="platform/external/libhevc" />
   <remove-project name="platform/external/libjxl" />
   <remove-project name="platform/external/libpng" />
+  <remove-project name="platform/external/libppd" />
   <remove-project name="platform/external/mksh" />
   <remove-project name="platform/external/tinyalsa" />
   <remove-project name="platform/external/tinycompress" />
@@ -69,6 +71,7 @@
   <!-- packages -->
   <remove-project name="platform/packages/apps/CellBroadcastReceiver" />
   <remove-project name="platform/packages/apps/Contacts" />
+  <remove-project name="platform/packages/apps/ContactsPicker" />
   <remove-project name="platform/packages/apps/Dialer" />
   <remove-project name="platform/packages/apps/DocumentsUI" />
   <remove-project name="platform/packages/apps/EmergencyInfo" />
@@ -76,6 +79,7 @@
   <remove-project name="platform/packages/apps/Messaging" />
   <remove-project name="platform/packages/apps/Settings" />
   <remove-project name="platform/packages/apps/ThemePicker" />
+  <remove-project name="platform/packages/apps/TV" />
   <remove-project name="platform/packages/apps/WallpaperPicker2" />
   <remove-project name="platform/packages/inputmethods/LatinIME" />
   <remove-project name="platform/packages/modules/adb" />
@@ -83,12 +87,14 @@
   <remove-project name="platform/packages/modules/Connectivity" />
   <remove-project name="platform/packages/modules/Nfc" />
   <remove-project name="platform/packages/modules/UprobeStats" />
+  <remove-project name="platform/packages/modules/Uwb" />
   <remove-project name="platform/packages/modules/Wifi" />
   <remove-project name="platform/packages/providers/BlockedNumberProvider" />
   <remove-project name="platform/packages/providers/CalendarProvider" />
   <remove-project name="platform/packages/providers/CallLogProvider" />
   <remove-project name="platform/packages/providers/ContactsProvider" />
   <remove-project name="platform/packages/providers/DownloadProvider" />
+  <remove-project name="platform/packages/providers/MediaProvider" />
   <remove-project name="platform/packages/providers/TelephonyProvider" />
   <remove-project name="platform/packages/services/Telecomm" />
   <remove-project name="platform/packages/services/Telephony" />

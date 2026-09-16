@@ -100,7 +100,7 @@
   <project path="packages/apps/Settings" name="ascp/platform_packages_apps_Settings" remote="codeberg" revision="clean-branch" />
   <project path="packages/apps/ThemePicker" name="platform_packages_apps_ThemePicker" remote="ascp" />
   <project path="packages/apps/TV" name="platform_packages_apps_TV" groups="pdk" remote="ascp" revision="17" />
-  <project path="packages/apps/OpenDelta" name="packages_apps_OpenDelta" remote="ascp" revision="sixteen-qpr2" />
+  <project path="packages/apps/Updater" name="platform_packages_apps_Updater" remote="ascp" revision="17" />
   <project path="packages/apps/WallpaperPicker2" name="platform_packages_apps_WallpaperPicker2" remote="ascp" />
   <project path="packages/modules/adb" name="platform_packages_modules_adb" groups="pdk" remote="ascp" />
   <project path="packages/modules/Bluetooth" name="platform_packages_modules_Bluetooth" remote="ascp" />

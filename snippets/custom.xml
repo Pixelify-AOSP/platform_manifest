@@ -149,9 +149,8 @@
   <project path="vendor/pixel/extract-utils" name="kenway214/proprietary_vendor_pixel_extract-utils" remote="codeberg" >
     <linkfile src="extract-all.py" dest="vendor/pixel/extract-all.py" />
   </project>
-  <project path="vendor/pixel/clocks" name="kenway214/proprietary_vendor_pixel_clocks" remote="codeberg" />
-  <project path="vendor/pixel/gms" name="blackflag12kenway/proprietary_vendor_pixel_gms" remote="gitlab" clone-depth="1" />
-  <project path="vendor/pixel/prebuilts" name="kenway214/proprietary_vendor_pixel_prebuilts" remote="codeberg" />
-  <project path="vendor/pixel/sounds" name="kenway214/proprietary_vendor_pixel_sounds" remote="codeberg" />
-  <project path="vendor/pixel/themepicker" name="blackflag12kenway/proprietary_vendor_pixel_themepicker" remote="gitlab" />
+  <project path="vendor/pixel/clocks" name="android_vendor_pixel_clocks" remote="ascp" revision="17" />
+  <project path="vendor/pixel/gms" name="blackflag12kenway/proprietary-vendor-pixel-gms-ascp" remote="gitlab" revision="seventeen" clone-depth="1" />
+  <project path="vendor/pixel/sounds" name="android_vendor_pixel_sounds" remote="ascp" revision="17" />
+  <project path="vendor/pixel/themepicker" name="android_vendor_pixel_themepicker" remote="ascp" revision="17" />
 </manifest>
